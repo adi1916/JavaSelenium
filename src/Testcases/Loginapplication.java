@@ -17,9 +17,12 @@ public class Loginapplication {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Adi\\IdeaImportModules\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
+
 		RediffLoginpage rd=new RediffLoginpage(driver);
 		rd.Emaild().sendKeys("hello");
 		rd.Password().sendKeys("hello");
+
+
 		//rd.submit().click();
 		rd.Home().click();
 		RediffHomepage rh=new RediffHomepage(driver);
