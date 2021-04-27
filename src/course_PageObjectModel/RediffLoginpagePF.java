@@ -1,6 +1,5 @@
-package objectrepository;
+package course_PageObjectModel;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,8 +14,6 @@ public class RediffLoginpagePF {
 		PageFactory.initElements(driver, this);
 	}
 	
- 
-	
 	@FindBy(xpath=".//*[@id='login1']")
 	WebElement username;
 	
@@ -25,15 +22,10 @@ public class RediffLoginpagePF {
 	
 	@FindBy(linkText="Home")
 	WebElement home;
-	
-	
-	
 
 	@FindBy(name="proceed")
 	WebElement go;
-	
-   
-   
+
    public WebElement Emaild()
    {
 	   return username;
@@ -43,15 +35,9 @@ public class RediffLoginpagePF {
    {
 	   return Password;
    }
-   
   
    public WebElement Home()
    {
 	   return home;
    }
-	
-
-	
-	
-	
 }

@@ -1,7 +1,7 @@
-package Testcases;
+package course_Testcases;
 
-import objectrepository.RediffHomepage;
-import objectrepository.RediffLoginpage;
+import course_PageObjectModel.RediffHomepage;
+import course_PageObjectModel.RediffLoginpage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,15 +21,11 @@ public class Loginapplication {
 		rd.Emaild().sendKeys("hello");
 		rd.Password().sendKeys("hello");
 		//rd.submit().click();
-		rd.Home().click();
-		RediffHomepage rh=new RediffHomepage(driver);
-		rh.Search().sendKeys("rediff");
-		rh.Submit().click();
-		
-
+		rd.newAccount().click();
+		//RediffHomepage rh=new RediffHomepage(driver);
+		//rh.Search().sendKeys("rediff");
+		//rh.Submit().click();
 		
 	}
-	
-	
 	
 }
