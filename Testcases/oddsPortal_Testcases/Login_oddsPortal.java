@@ -16,5 +16,6 @@ public class Login_oddsPortal {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.oddsportal.com/soccer/england/league-two/standings/");
         //TODO -> create loginpagePOM for oddsPortal
+        driver.close();
     }
 }

@@ -25,7 +25,7 @@ public class Loginapplication {
 		//RediffHomepage rh=new RediffHomepage(driver);
 		//rh.Search().sendKeys("rediff");
 		//rh.Submit().click();
-		
+		driver.close();
 	}
 	
 }
