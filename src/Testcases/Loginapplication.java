@@ -1,7 +1,7 @@
-package Testcases.course_examples;
+package Testcases;
 
-import objectRepository.course_examples.RediffHomepage;
-import objectRepository.course_examples.RediffLoginpage;
+import objectrepository.RediffHomepage;
+import objectrepository.RediffLoginpage;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +14,7 @@ public class Loginapplication {
 	@Test
 	public void Login()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Adi\\IdeaImportModules\\chromedriver93\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Adi\\IdeaImportModules\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
 
