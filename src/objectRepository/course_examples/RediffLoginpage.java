@@ -1,4 +1,4 @@
-package objectrepository;
+package objectRepository.course_examples;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
