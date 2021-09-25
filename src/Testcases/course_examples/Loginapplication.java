@@ -14,7 +14,7 @@ public class Loginapplication {
 	@Test
 	public void Login()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Adi\\IdeaImportModules\\chromedriver93\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\IdeaImportModules\\chromedriver93\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
 

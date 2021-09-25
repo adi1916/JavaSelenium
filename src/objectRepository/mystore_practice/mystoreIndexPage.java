@@ -19,6 +19,15 @@ public class mystoreIndexPage {
   
   @FindBy(xpath="//button[@type='submit']")
   WebElement submit;
+
+  @FindBy(linkText="Specials")
+  WebElement linkSpecials;
+
+  @FindBy(css=".sf-menu > li:nth-child(2) > a:nth-child(1)")
+   WebElement DressesCategory;
+
+
+
     public WebElement Search()
     {
     	return search;
@@ -28,5 +37,14 @@ public class mystoreIndexPage {
     {
     	return submit;
     }
-	
+
+    public WebElement linkSpecials()
+    {
+        return linkSpecials;
+    }
+
+    public WebElement DressesCategory()
+    {
+        return DressesCategory;
+    }
 }
