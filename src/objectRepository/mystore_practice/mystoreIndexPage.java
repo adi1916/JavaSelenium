@@ -14,19 +14,20 @@ public class mystoreIndexPage {
 		PageFactory.initElements(driver, this);
 	}
 
-  @FindBy(id="search_query_top")
-  WebElement search;
-  
-  @FindBy(xpath="//button[@type='submit']")
-  WebElement submit;
+    @FindBy(id="search_query_top")
+    WebElement search;
 
-  @FindBy(linkText="Specials")
-  WebElement linkSpecials;
+    @FindBy(xpath="//button[@type='submit']")
+    WebElement submit;
 
-  @FindBy(css=".sf-menu > li:nth-child(2) > a:nth-child(1)")
-   WebElement DressesCategory;
+    @FindBy(linkText="Specials")
+    WebElement linkSpecials;
 
+    @FindBy(css=".sf-menu > li:nth-child(2) > a:nth-child(1)")
+    WebElement DressesCategory;
 
+    @FindBy(className="login")
+    WebElement signIn;
 
     public WebElement Search()
     {
@@ -46,5 +47,10 @@ public class mystoreIndexPage {
     public WebElement DressesCategory()
     {
         return DressesCategory;
+    }
+
+    public WebElement SignIn()
+    {
+        return signIn;
     }
 }

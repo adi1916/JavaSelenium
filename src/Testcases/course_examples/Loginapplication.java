@@ -8,9 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 public class Loginapplication {
-// Login page class implemented in normal page object pattern style
-	
-	// Home page class implemented in Page object factory methdos
+
 	@Test
 	public void Login()
 	{

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class mystore_variousSeleniumLocators {
+public class mystore_1_variousSeleniumLocators {
 
 	@Test
 	public void TC1_selectWebElementById()
@@ -17,16 +17,6 @@ public class mystore_variousSeleniumLocators {
 
 		mystoreIndexPage idx=new mystoreIndexPage(driver);
 		idx.Search().sendKeys("I want to search someth");
-		//rd.Password().sendKeys("hello");
-
-
-		//rd.submit().click();
-		//rd.Home().click();
-		//RediffHomepage rh=new RediffHomepage(driver);
-		//rh.Search().sendKeys("rediff");
-		//rh.Submit().click();
-
-		
 	}
 
 	@Test
@@ -39,17 +29,6 @@ public class mystore_variousSeleniumLocators {
 		mystoreIndexPage idx=new mystoreIndexPage(driver);
 		idx.Search().sendKeys("chiffon");
 		idx.Submit().click();
-
-		//rd.Password().sendKeys("hello");
-
-
-		//
-		//rd.Home().click();
-		//RediffHomepage rh=new RediffHomepage(driver);
-		//rh.Search().sendKeys("rediff");
-		//rh.Submit().click();
-
-
 	}
 
 	@Test
@@ -61,17 +40,6 @@ public class mystore_variousSeleniumLocators {
 
 		mystoreIndexPage idx=new mystoreIndexPage(driver);
 		idx.linkSpecials().click();
-
-		//rd.Password().sendKeys("hello");
-
-
-		//
-		//rd.Home().click();
-		//RediffHomepage rh=new RediffHomepage(driver);
-		//rh.Search().sendKeys("rediff");
-		//rh.Submit().click();
-
-
 	}
 
 	@Test
@@ -83,16 +51,5 @@ public class mystore_variousSeleniumLocators {
 
 		mystoreIndexPage idx=new mystoreIndexPage(driver);
 		idx.DressesCategory().click();
-
-		//rd.Password().sendKeys("hello");
-
-
-		//
-		//rd.Home().click();
-		//RediffHomepage rh=new RediffHomepage(driver);
-		//rh.Search().sendKeys("rediff");
-		//rh.Submit().click();
-
-
 	}
 }
