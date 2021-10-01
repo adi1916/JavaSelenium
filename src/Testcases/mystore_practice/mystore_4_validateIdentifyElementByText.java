@@ -12,7 +12,7 @@ import static org.junit.Assert.assertTrue;
 public class mystore_4_validateIdentifyElementByText {
 
 	@Test
-	public void TC1_validateIdentifyElementByText()
+	public void TC4_validateIdentifyElementByText()
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\IdeaImportModules\\chromedriver93\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
@@ -21,9 +21,6 @@ public class mystore_4_validateIdentifyElementByText {
 		mystoreIndexPage idx=new mystoreIndexPage(driver);
 		idx.DressesCategory().click();
 		driver.findElement(By.xpath("//*[contains(text(),'Printed Chiffon Dress')]")).click();
-		//driver.findElement(By.xpath("//ul[contains(@class,'product_list')]/li[2]/div/div/div/a/img")).click();
-		//String returnedProduct = driver.findElement(By.xpath("//p[@id='product_reference']/span")).getText();
-		//assertTrue(returnedProduct.contains("demo_4"));
 	}
 
 

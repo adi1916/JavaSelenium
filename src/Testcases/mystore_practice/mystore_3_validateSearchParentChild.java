@@ -13,7 +13,7 @@ import static org.junit.Assert.assertTrue;
 public class mystore_3_validateSearchParentChild {
 
 	@Test
-	public void TC1_validateSignInErrorMessage()
+	public void TC3_validateSignInErrorMessage()
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\IdeaImportModules\\chromedriver93\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();

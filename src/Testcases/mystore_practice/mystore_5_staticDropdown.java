@@ -1,34 +1,33 @@
 package Testcases.mystore_practice;
 
 import objectRepository.mystore_practice.mystoreIndexPage;
-import objectRepository.mystore_practice.mystoreSignInPage;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
 import static org.junit.Assert.assertTrue;
 
 
-public class mystore_2_validateSignInErrorMessage {
+public class mystore_5_staticDropdown {
 
 	@Test
-	public void TC2_validateSignInErrorMessage()
+	public void TC5_validateIdentifyElementByText()
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\IdeaImportModules\\chromedriver93\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
-
 		mystoreIndexPage idx=new mystoreIndexPage(driver);
-		idx.SignIn().click();
+		idx.DressesCategory().click();
 
-		mystoreSignInPage login=new mystoreSignInPage(driver);
-		login.EmailAddress().sendKeys("Hello");
-		login.Password().sendKeys("Hello");
-		login.SubmitLogin().click();
+		WebElement staticDropdown = driver.findElement(By.xpath("//*[@id='selectProductSort']"));
+		Select dropdown = new Select(staticDropdown);
 
+		String dropdownValue = dropdown.getFirstSelectedOption().getText();
+		assertTrue(dropdownValue.equals("--"));
 
-		String returnedError = login.SignInAlert().getText();
-		assertTrue(returnedError.contains("Invalid email address"));
 	}
 
 
