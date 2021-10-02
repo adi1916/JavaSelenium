@@ -11,18 +11,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class course_2_dropdownIncrement {
 
 	@Test
-	public void TC2_dropdownIncrement()
+	public void TC2_dropdownIncrement() throws InterruptedException
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\IdeaImportModules\\chromedriver93\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 		driver.findElement(By.id("divpaxinfo")).click();
 
-		try{
-			Thread.sleep(2000);
-		}
-		catch(InterruptedException ie){
-		}
+		Thread.sleep(2000);
 
 		System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
 
@@ -31,11 +27,7 @@ public class course_2_dropdownIncrement {
 			driver.findElement(By.id("hrefIncAdt")).click();
 		}
 
-		try{
-			Thread.sleep(2000);
-		}
-		catch(InterruptedException ie){
-		}
+		Thread.sleep(2000);
 
 		driver.findElement(By.id("btnclosepaxoption")).click();
 		Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), "5 Adult");
