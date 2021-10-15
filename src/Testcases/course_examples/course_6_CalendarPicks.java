@@ -13,7 +13,7 @@ import java.util.List;
 public class course_6_CalendarPicks {
 
 	@Test
-	public void TC5_assignmentCheckboxes() throws InterruptedException
+	public void TC6_assignmentCheckboxes() throws InterruptedException
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\IdeaImportModules\\chromedriver93\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
