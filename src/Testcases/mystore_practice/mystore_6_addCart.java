@@ -6,7 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Arrays;
 import java.util.List;
@@ -44,7 +46,9 @@ public class mystore_6_addCart {
         driver.get("http://automationpractice.com/index.php");
 
         addItems(driver, itemsNeeded);
-        Thread.sleep(3000);
+
+        WebDriverWait w = new WebDriverWait(driver,5);
+        w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Proceed to checkout')]")));
         String productsInCart = driver.findElement(By.xpath("//span[ contains(@class, 'ajax_cart_quantity')]")).getText();
 
         assertTrue(productsInCart.equals("3"));
