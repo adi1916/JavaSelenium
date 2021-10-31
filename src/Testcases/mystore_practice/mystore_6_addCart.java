@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
@@ -17,7 +18,9 @@ public class mystore_6_addCart {
 
     String[] itemsNeeded = {"Faded Short Sleeve T-shirts", "Blouse", "Printed Chiffon Dress"};
 
+
     public static void addItems(WebDriver driver, String[] whatToBuyList) throws InterruptedException{
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         int j = 0;
         List<WebElement> products = driver.findElements(By.cssSelector("a.product-name"));
         for (int i = 0; i < products.size(); i++) {
@@ -26,9 +29,7 @@ public class mystore_6_addCart {
             if (itemsNeededList.contains(productName)) {
                 j++;
                 driver.findElements(By.xpath("//a[@title='Add to cart']")).get(i).click();
-				Thread.sleep(3000);
 				driver.findElement(By.xpath("//span[@title='Continue shopping']")).click();
-				Thread.sleep(3000);
                 if (j == whatToBuyList.length) {
                     break;
                 }
@@ -38,13 +39,12 @@ public class mystore_6_addCart {
 
     @Test
     public void TC6_addCart() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\IdeaImportModules\\chromedriver93\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\IdeaImportModules\\chromedriver94\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("http://automationpractice.com/index.php");
-        Thread.sleep(3000);
 
         addItems(driver, itemsNeeded);
-
+        Thread.sleep(3000);
         String productsInCart = driver.findElement(By.xpath("//span[ contains(@class, 'ajax_cart_quantity')]")).getText();
 
         assertTrue(productsInCart.equals("3"));
