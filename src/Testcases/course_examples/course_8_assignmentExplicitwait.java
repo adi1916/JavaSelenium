@@ -20,8 +20,8 @@ public class course_8_assignmentExplicitwait {
 
 		driver.findElement(By.xpath("//a[contains(text(),'Ajax')]")).click();
 
-		WebDriverWait w = new WebDriverWait(driver,5);
-		w.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Ajax')]")));
+		WebDriverWait w = new WebDriverWait(driver,20);
+		w.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id = 'results']")));
 
 		String textToPrint = driver.findElement(By.xpath("//div[@id = 'results']")).getText();
 		System.out.print(textToPrint);
