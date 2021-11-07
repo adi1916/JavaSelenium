@@ -1,4 +1,4 @@
-package Testcases.Wikipedia;
+package Testcases.various_examples.Wikipedia;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
