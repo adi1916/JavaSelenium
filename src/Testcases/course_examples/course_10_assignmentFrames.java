@@ -14,7 +14,7 @@ public class course_10_assignmentFrames {
 	@Test
 	public void TC10_assignmentFrames() throws InterruptedException
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\IdeaImportModules\\chromedriver95\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\IdeaImportModules\\chromedriver\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/");
 		driver.findElement(By.linkText("Nested Frames")).click();
