@@ -37,6 +37,30 @@ public class momondo_3_SelectCertainCalendarDate {
 		int myCount = driver.findElements(By.cssSelector("div[class='mkUa mkUa-pres-default']")).size();
 		System.out.println("Number of days= " + myCount);
 
+		while(!driver.findElement(By.cssSelector("[class='wHSr-monthName']")).getText().contains("martie"))
+		{
+			driver.findElement(By.cssSelector("[aria-label='Luna următoare']")).click();
+		}
+
+		driver.findElement(By.cssSelector("[aria-label='23 aprilie 2022']")).click();
+		driver.findElement(By.cssSelector("[aria-label='23 mai 2022']")).click();
+		/*
+		List<WebElement> dates= driver.findElements(By.cssSelector("div[class='mkUa mkUa-pres-default']"));
+
+		//Grab common attribute//Put into list and iterate
+		int count=driver.findElements(By.className("day")).size();
+
+		for(int i=0;i<count;i++)
+		{
+			String text=driver.findElements(By.className("day")).get(i).getText();
+			if(text.equalsIgnoreCase("21"))
+			{
+				driver.findElements(By.className("day")).get(i).click();
+				break;
+			}
+
+		}
+			*/
 
 	}
 
